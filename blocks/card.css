@@ -1,0 +1,32 @@
+.card {
+    max-width: 413px;
+}
+
+.card__image {
+    height: 413px;
+    width: 413px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.card__like-btn {
+    background-image: url(../images/like.svg);
+    width: 23px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    opacity: 40%;
+}
