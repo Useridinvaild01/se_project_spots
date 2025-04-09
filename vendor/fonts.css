@@ -2,19 +2,26 @@
     src: url(./fonts/Poppins/Poppins-Regular.ttf) format("woff2"),
             url(./fonts/Poppins/Poppins-Regular.ttf) format("woff"),
             url(./fonts/Poppins/Poppins-Regular.ttf) format("truetype");
-    font-family: "Poppins";
+    font-family: Poppins;
 }
 
 @font-face {
-    font-family: "Poppins";
+    src: url(./fonts/Poppins/Poppins-Medium.ttf) format("woff2"),
+            url(./fonts/Poppins/Poppins-Medium.ttf) format("woff"),
+            url(./fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+    font-family: Poppins;
+}
+
+@font-face {
+    font-family: Poppins;
     font-style: normal;
     font-weight: 400;
     src: url(./fonts/Poppins/Poppins-Regular.ttf) format("truetype"); 
 }
 
 @font-face {
-    font-family: "Poppins";
+    font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    src: url(./fonts/Poppins/Poppins-Regular.ttf) format("truetype"); 
+    src: url(./fonts/Poppins/Poppins-Medium.ttf) format("truetype"); 
 }
