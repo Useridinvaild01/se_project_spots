@@ -23,7 +23,7 @@
     font-style: normal;
     font-size: 32px;
     line-height: 1;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -39,7 +39,7 @@
     font-style: normal;
     font-size: 16px;
     line-height: 1;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -55,11 +55,15 @@
     font-style: normal;
     font-size: 16px;
     line-height: 1;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     border: none;
     background-color: transparent;
     color: rgba(33,33,33, 0.7);
 }
+
+.profile__edit-btn:hover{
+    color: #212121;
+  }
 
 .profile__add-btn {
     margin: 18px 32px 18px 32px;
@@ -68,7 +72,7 @@
     font-style: normal;
     font-size: 16px;
     line-height: 1;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     border-radius: 8px;
     background-color: #212121;
     color: #fcf5e5;
@@ -77,6 +81,11 @@
     gap: 8px;
     border: none;
 }
+
+.profile__add-btn:hover{
+    background-color: #212121;
+    opacity: 80%;
+  }
 
 @media screen and (max-width: 627px) {
     .profile {

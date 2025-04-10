@@ -15,7 +15,7 @@
     font-style: normal;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -29,6 +29,10 @@
     background-color: transparent;
     opacity: 40%;
 }
+
+.card__like-btn:hover{
+    opacity: 100%;
+  }
 
 @media screen and (max-width: 627px) {
     .card__image {
