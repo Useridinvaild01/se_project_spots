@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spots</title>
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <div class="profile">
+        <div class="profile__avatar-container">
+          <img
+            class="profile__avatar"
+            src="#"
+            alt="Profile avatar"
+          />
+          <button
+            class="profile__avatar-edit-btn"
+            type="button"
+            aria-label="Edit avatar"
+          ></button>
+        </div>
+
+        <div class="profile__info">
+          <h1 class="profile__name"></h1>
+          <p class="profile__description"></p>
+        </div>
+
+        <button
+          class="profile__edit-btn"
+          type="button"
+          aria-label="Edit profile"
+        ></button>
+
+        <button
+          class="profile__add-btn"
+          type="button"
+          aria-label="Add new post"
+        ></button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="cards">
+        <ul class="cards__list"></ul>
+
+        <template id="card-template">
+          <li class="card">
+            <img class="card__image" src="#" alt="" />
+            <button
+              type="button"
+              class="card__delete-btn"
+              aria-label="Delete card"
+            ></button>
+            <div class="card__content">
+              <h2 class="card__title"></h2>
+              <button
+                type="button"
+                class="card__like-btn"
+                aria-label="Like"
+              ></button>
+            </div>
+          </li>
+        </template>
+      </section>
+    </main>
+
+   
+    <div class="modal modal_type_edit">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <h2 class="modal__title">Edit profile</h2>
+        <form class="modal__form" novalidate>
+          <input
+            id="profile-name"
+            class="modal__input"
+            type="text"
+            required
+          />
+          <input
+            id="profile-description"
+            class="modal__input"
+            type="text"
+            required
+          />
+          <button class="modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="modal modal_type_add">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <h2 class="modal__title">New place</h2>
+        <form class="modal__form" novalidate>
+          <input
+            id="card-title"
+            class="modal__input"
+            type="text"
+            required
+          />
+          <input
+            id="card-link"
+            class="modal__input"
+            type="url"
+            required
+          />
+          <button class="modal__button" type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="modal modal_type_avatar">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <h2 class="modal__title">Change avatar</h2>
+        <form class="modal__form" novalidate>
+          <input
+            id="avatar-link"
+            class="modal__input"
+            type="url"
+            required
+          />
+          <button class="modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="modal modal_type_delete">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <h2 class="modal__title">Are you sure?</h2>
+        <form class="modal__form">
+          <button class="modal__button" type="submit">Yes</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="modal" id="image-preview-modal">
+      <div class="modal__image-container">
+        <button class="modal__close" type="button"></button>
+        <img class="modal__image" src="#" alt="" />
+        <p class="modal__caption"></p>
+      </div>
+    </div>
+  </body>
+</html>
