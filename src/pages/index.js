@@ -4,7 +4,7 @@ import Api from "../utils/Api.js";
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "28cdf155-072d-4fc2-b457-1ef64b70e181",
+    authorization: "bf9e003a-3773-4da0-af1f-9d54c85d9ed3",
     "Content-Type": "application/json",
   },
 });
@@ -126,8 +126,34 @@ function getCardElement(cardData) {
 }
 
 function renderCards(cards) {
+  console.log("RENDER START");
+  console.log("Cards received:", cards);
+  console.log("Cards list:", cardsList);
+  console.log("Card template:", cardTemplate);
+
+  if (!cardsList) {
+    console.error("ERROR: .cards__list was not found");
+    return;
+  }
+
+  if (!cardTemplate) {
+    console.error("ERROR: #card-template was not found");
+    return;
+  }
+
   cardsList.innerHTML = "";
-  cards.forEach((card) => cardsList.append(getCardElement(card)));
+
+  cards.forEach((card) => {
+    console.log("Creating card:", card);
+
+    const cardElement = getCardElement(card);
+
+    console.log("Card created:", cardElement);
+
+    cardsList.append(cardElement);
+  });
+
+  console.log("Cards rendered successfully");
 }
 
 function prependCard(card) {
@@ -226,9 +252,19 @@ addForm.addEventListener("submit", handleAddCardSubmit);
 avatarForm.addEventListener("submit", handleAvatarSubmit);
 deleteForm.addEventListener("submit", handleDeleteSubmit);
 
+
+
 Promise.all([api.getUserInfo(), api.getInitialCards()])
   .then(([user, cards]) => {
+    console.log("BEFORE RENDER");
+    console.log("USER:", user);
+    console.log("CARDS:", cards);
+
     setProfile(user);
+
+    console.log("CALLING RENDER");
     renderCards(cards);
   })
-  .catch(console.error);
+  .catch((err) => {
+    console.error("API ERROR:", err);
+  });
